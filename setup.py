@@ -12,7 +12,7 @@ setuptools.setup(
     description="Pacote de layout baseado no vali",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/MyNr/admin-val",
+    url="https://github.com/MyNr/boots-django",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
