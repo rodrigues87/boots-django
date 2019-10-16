@@ -10,10 +10,7 @@ from django.http import HttpRequest
 from django.urls import reverse, resolve
 from django.utils.safestring import mark_safe
 
-from cadastros.models import Cadastros
-from cursos.models import Turmas
-from pagamentos.models import Pagamentos
-from vendas.models import Venda
+
 from ..widgets import ValiRelatedFieldWidgetWrapper
 
 register = template.Library()
