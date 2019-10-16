@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="boots-django",
-    version="0.0.2",
+    version="0.0.3",
     author="pedro",
     author_email="pedroh.mix@gmail.com",
     description="Pacote de layout baseado no vali",
