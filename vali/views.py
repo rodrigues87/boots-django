@@ -6,10 +6,6 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 
 
-from cadastros.models import Cadastros
-from cursos.models import Turmas
-from pagamentos.models import Pagamentos
-from vendas.models import Venda
 from .counters import CounterBase
 from .charts import ChartsBase
 
@@ -68,7 +64,7 @@ class ValiDashboardBase(TemplateView):
   def dispatch(self, request, *args, **kwargs):
     return super(ValiDashboardBase, self).dispatch(request, *args, **kwargs)
 
-
+"""
 def usuariosAtivos():
   count = 0
 
@@ -100,13 +96,14 @@ def vendas():
   quantidadeVendas = Venda.objects.count()
   return quantidadeVendas
 
-
+"""
 class ValiDashboardView(ValiDashboardBase):
 
   r = lambda: random.randint(0, 100)
 
   template_name = 'dashboard.html'
   # default count users data
+  """
   users = usuariosAtivos()
   # default count groups data
   userInat = usuariosInativos()
@@ -114,6 +111,7 @@ class ValiDashboardView(ValiDashboardBase):
   pagamentosEmAberto = pagamentosAberto()
 
   vendas = vendas()
+  """
   # default charts data
   list_charts = [
 
@@ -175,10 +173,10 @@ class ValiDashboardView(ValiDashboardBase):
 
   # default icons data
   list_counters = [
-    {"title": "ATIVOS", "value": users, "style": "primary", "icon": "fa-user-circle"},
-    {"title": "INATIVOS", "value": userInat, "style": "warning", "icon": "fa-users"},
-    {"title": "PENDENTES", "value": pagamentosEmAberto, "style": "info", "icon": "fa-money"},
-    {"title": "VENDAS", "value": vendas, "style": "danger", "icon": "fa-line-chart"},
+    {"title": "ATIVOS", "value": 4, "style": "primary", "icon": "fa-user-circle"},
+    {"title": "INATIVOS", "value": 6, "style": "warning", "icon": "fa-users"},
+    {"title": "PENDENTES", "value": 8, "style": "info", "icon": "fa-money"},
+    {"title": "VENDAS", "value": 10, "style": "danger", "icon": "fa-line-chart"},
   ]
 
 
